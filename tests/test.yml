@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  roles:
+    - letencrypt-aws-secret-reader
+  vars:
+    secret_key_id: "secret_key_id"
+    secret_access: "secret_access"
+    aws_region: "eu-west-2"
+    decrypt: true
+    aws_profile: "dev"
+    check_lookup: false
