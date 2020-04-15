@@ -56,4 +56,4 @@ BSD
 Author Information
 ------------------
 
-`Tony Edogiawerie`
+`tonnyed@hotmail.com`
