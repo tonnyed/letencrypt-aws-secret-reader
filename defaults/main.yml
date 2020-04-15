@@ -1,6 +1,5 @@
 ---
 # defaults file for letencrypt-aws-secret-reader
-
 decrypt: true
 check_lookup: false
 aws_profile:

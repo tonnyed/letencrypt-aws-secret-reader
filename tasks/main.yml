@@ -3,15 +3,18 @@
 - name: looking up aws-secret-access from parameter store
   set_fact:
     aws_secret_access: "{{ lookup('aws_ssm', lookup('vars', 'secret_access'), decrypt=lookup('vars', 'decrypt') , region=lookup('vars', 'aws_region'), aws_profile=lookup('vars', 'aws_profile') ) }}"
+
 - name: view aws-secret-access
   debug:
     msg: "{{ aws_secret_access }}"
   environment:
     AWS_PROFILE: "dev"
   when: check_lookup  == true
+
 - name: getting aws-secret-key-id  from parameter store
   set_fact:
     aws_secret_key_id: "{{ lookup('aws_ssm', lookup('vars', 'secret_key_id'), decrypt=lookup('vars', 'decrypt'), region=lookup('vars', 'aws_region'), aws_profile=lookup('vars', 'aws_profile') ) }}"
+
 - name: view aws-secret-key-id
   debug:
     msg: "{{ lookup('vars', 'aws_secret_key_id') }}"
