@@ -6,18 +6,19 @@ galaxy_info:
   license: BSD
   min_ansible_version: 2.9
 
-
   platforms:
-  - name: RedHat
+  - name: Fedora
     versions:
     - all
-
+    - 30
+  - name: EL
+    versions:
+    - 7
 
   galaxy_tags:
   - letencrypt
   - certbot
   - letencrypt-aws-secret
-
 
 dependencies: []
 
